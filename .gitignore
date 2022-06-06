@@ -64,3 +64,5 @@ yarn-debug.log*
 .DS_Store
 
 vendor/
+
+/public/system/posts/photos/
