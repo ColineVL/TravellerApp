@@ -1,24 +1,17 @@
-# README
+# Tutorial
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+See on OpenClassroom: [link](https://openclassrooms.com/fr/courses/4510766-build-dynamic-websites-with-rails)
 
-Things you may want to cover:
+# Install everything
 
-* Ruby version
+```sd
+bundle
+bin/rails db:migrate
+```
 
-* System dependencies
 
-* Configuration
+# Launch the server
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sd
+bin/rails s
+```
