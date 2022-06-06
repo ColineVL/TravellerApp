@@ -1,0 +1,7 @@
+<div id="<%= dom_id post %>">
+  <h1><%= post.title %></h1>
+  <p><%= post.body %></p>
+  <% if post.photo.present? %>
+    <p><%= image_tag post.photo.url(:thumb) %></p>
+  <% end %>
+</div>
