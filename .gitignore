@@ -33,3 +33,34 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/node_modules
+/yarn-error.log
+
+# Upload
+/public/uploads
+
+# Coverage reports
+coverage
+
+# Redis dump
+dump.rdb
+
+# Ignore temporary slim files
+*.slim.slim_lint.tmp*
+
+# Ignore RubyMine IDE generated files
+.idea/
+/public/packs
+/public/packs-test
+yarn-debug.log*
+.yarn-integrity
+
+# Vite Ruby
+/public/vite
+/public/vite-dev
+/public/vite-test
+*.local
+.DS_Store
+
+vendor/
