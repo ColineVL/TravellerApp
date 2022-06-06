@@ -2,8 +2,23 @@
 
 <%= render @user %>
 
+<p id="notice"><%= notice %></p>
+
+<% @user.posts.each do |post| %>
+  <h2><%= link_to post.title, post %></h2>
+  <% if post.photo.present? %>
+    <p><%= image_tag post.photo.url(:thumb) %></p>
+  <% end %>
+  <p><%= post.body.truncate(100) %></p>
+<% end %>
+
+
 <div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
+
+  <% if @user.id == current_user.id %>
+    <%= link_to "Edit your info", edit_user_path(@user) %>
+  <% end %>
+
   <%= link_to "Back to users", users_path %>
 
   <%= button_to "Destroy this user", @user, method: :delete %>
