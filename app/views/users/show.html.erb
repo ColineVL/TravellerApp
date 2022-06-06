@@ -1,9 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @user %>
+<h1>Information</h1>
+<h2><%= @user.name %></h2>
+<h2><%= @user.email %></h2>
+<% if @user.avatar.present? %>
+  <%= image_tag @user.avatar.url(:medium) %>
+<% end %>
 
-<p id="notice"><%= notice %></p>
-
+<h1>Posts</h1>
 <% @user.posts.each do |post| %>
   <h2><%= link_to post.title, post %></h2>
   <% if post.photo.present? %>

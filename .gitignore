@@ -66,3 +66,4 @@ yarn-debug.log*
 vendor/
 
 /public/system/posts/photos/
+/public/system/users

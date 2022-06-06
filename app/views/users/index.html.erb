@@ -5,6 +5,9 @@
 <div id="users">
   <% @users.each do |user| %>
     <p>
+      <% if user.avatar.present? %>
+        <%= image_tag user.avatar.url(:thumb) %>
+      <% end %>
       <%= link_to user.name, user %> | <%= user.email %>
     </p>
   <% end %>
