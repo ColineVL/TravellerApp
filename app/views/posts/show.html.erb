@@ -12,6 +12,8 @@
   <%= link_to @post.user.name, @post.user %>
 </p>
 
+<p>Written here: <%= @post.longitude %>, <%= @post.latitude %></p>
+
 <div>
   <% if @post.user == current_user %>
     <%= link_to "Edit this post", edit_post_path(@post) %>
