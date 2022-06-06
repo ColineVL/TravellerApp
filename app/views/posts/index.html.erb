@@ -5,6 +5,9 @@
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
+    <% if post.photo.present? %>
+      <p><%= image_tag post.photo.url(:thumb) %></p>
+    <% end %>
     <p>
       <%= link_to "Show this post", post %>
     </p>

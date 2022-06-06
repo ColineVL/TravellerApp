@@ -2,13 +2,17 @@
 
 <%= render @post %>
 
+
+<% if @post.photo.present? %>
+  <p><%= image_tag @post.photo.url(:medium) %></p>
+<% end %>
+
+<p>
+  Posted by
+  <%= link_to @post.user.name, @post.user %>
+</p>
+
 <div>
-  <% if @post.photo.present? %>
-    <p><%= image_tag @post.photo.url(:medium) %></p>
-  <% end %>
-
-  <p><%= link_to @post.user.name, @post.user %></p>
-
   <% if @post.user == current_user %>
     <%= link_to "Edit this post", edit_post_path(@post) %>
     <%= button_to "Destroy this post", @post, method: :delete %>
